@@ -117,64 +117,65 @@
           </div>
         </div>
         <div class="product-list__content">
-          <ul class="product-list__products">
-            <li>
-              <article class="product-list__product">
+          <div class="products">
+            <div class="products__item item-products">
+              <div class="item-products__pic">
+                <img src="img/item-1-jpg.jpg" width="360" height="380" alt="">
+              </div>
+              <div>
+                  <h3>Любительская селфи-палка</h3>
+                  <span>500 руб.</span>
+              </div>
+              <div class="product-list__controls">
+                <button class="product-list__add-to-basket">В корзину</button>
+                <button class="product-list__add-to-compare">Добавить к сравнению</button>
+              </div>
+            </div>
+
+            <div class="products__item item-products">
+                <div class="item-products__pic">
+                  <img src="img/item-2-jpg.jpg" width="360" height="380" alt="">
+                </div>
                 <div>
-                  <img src="http://placehold.it/360x380" alt="">
-                  <img class="product-list__isnew" src="http://placehold.it/60x61" alt="">
+                    <h3>Профессиональная селфи-палка</h3>
+                    <span>1 500 руб.</span>
                 </div>
-                <h3>Любительская селфи-палка</h3>
-                <p>500 руб.</p>
                 <div class="product-list__controls">
-                  <button class="product-list__add2basket">В корзину</button>
-                  <button class="product-list__add2compare">Добавить к сравнению</button>
+                  <button class="product-list__add-to-basket">В корзину</button>
+                  <button class="product-list__add-to-compare">Добавить к сравнению</button>
                 </div>
-              </article>
-            </li>
-            <li>
-              <article class="product-list__product">
-                <div>
-                  <img src="http://placehold.it/360x380" alt="">
-                  <img class="product-list__isnew" src="http://placehold.it/60x61" alt="">
+              </div>
+
+              <div class="products__item item-products">
+                  <div class="item-products__pic">
+                    <img src="img/item-3-jpg.jpg" width="360" height="380" alt="">
+                  </div>
+                  <div>
+                      <h3>Непотопляемая селфи-палка</h3>
+                      <span>2 500 руб.</span>
+                  </div>
+                  <div class="product-list__controls">
+                    <button class="product-list__add-to-basket">В корзину</button>
+                    <button class="product-list__add-to-compare">Добавить к сравнению</button>
+                  </div>
                 </div>
-                <h3>Профессиональная селфи-палка </h3>
-                <p>1 500 руб.</p>
-                <div class="product-list__controls">
-                  <button class="product-list__add2basket">В корзину</button>
-                  <button class="product-list__add2compare">Добавить к сравнению</button>
-                </div>
-              </article>
-            </li>
-            <li>
-              <article class="product-list__product">
-                <div>
-                  <img src="http://placehold.it/360x380" alt="">
-                  <img class="product-list__isnew" src="http://placehold.it/60x61" alt="">
-                </div>
-                <h3>Непотопляемая селфи-палка</h3>
-                <p>2 500 руб.</p>
-                <div class="product-list__controls">
-                  <button class="product-list__add2basket">В корзину</button>
-                  <button class="product-list__add2compare">Добавить к сравнению</button>
-                </div>
-              </article>
-            </li>
-            <li>
-              <article class="product-list__product">
-                <div>
-                  <img src="http://placehold.it/360x380" alt="">
-                  <img class="product-list__isnew" src="http://placehold.it/60x61" alt="">
-                </div>
-                <h3>Селфи-палка «Следуй за мной»</h3>
-                <p>4 900 руб.</p>
-                <div class="product-list__controls">
-                  <button class="product-list__add2basket">В корзину</button>
-                  <button class="product-list__add2compare">Добавить к сравнению</button>
-                </div>
-              </article>
-            </li>
-          </ul>
+
+                <div class="products__item item-products">
+                    <div class="item-products__pic">
+                      <img src="img/item-4-jpg.jpg" width="360" height="380" alt="">
+                      <img class="product-list__is-new" src="img/is-new.png" width="60" height="60" alt="">
+                    </div>
+                    <div>
+                        <h3>Селфи-палка «Следуй за мной»</h3>
+                        <span>4 900 руб.</span>
+                    </div>
+                    <div class="product-list__controls">
+                      <button class="product-list__add-to-basket">В корзину</button>
+                      <button class="product-list__add-to-compare">Добавить к сравнению</button>
+                    </div>
+                  </div>
+
+          </div>
           <div class="product-list__pagination">
             <a class="product-list__back" href="/catalog?page=1">Назад</a>
             <ul class="product-list__pages">
@@ -195,57 +196,55 @@
     </section>
   </main>
   <footer class="footer">
-    <h2 class="visually-hidden">Подвал</h2>
-    <div class="footer_decorative-line"></div>
-    <div class="footer__logo">Device</div>
-    <div class="footer__menu">
-      <a class="footer__login-link" href="/login">
-        <img class="footer__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
-      <a class="footer__compare-link" href="/compare">
-        <img class="footer__compare-link__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
-      <a class="footer__basket-link" href="/basket">
-        <img class="footer__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
-    </div>
-    <p class="footer__address">
-      г. Москва, ул. Строителей, 15
-    </p>
-    <ul class="footer__services">
-      <li>
-        <a class="footer__service-link" href="">Доставка</a>
-      </li>
-      <li>
-        <a class="footer__service-link" href="">Гарантия</a>
-      </li>
-      <li>
-        <a class="footer__service-link" href="">Контакты</a>
-      </li>
-    </ul>
-    <p class="footer__phone">
-      Тел.: +7 (495) 495-95-95
-    </p>
-    <div class="footer_row-3">
-      <ul class="footer_row-3__social-bar">
+      <h2 class="visually-hidden">Подвал</h2>
+      <div class="footer_decorative-line"></div>
+      <div class="footer__logo">Device</div>
+      <div class="footer__menu">
+        <a class="footer__login-link" href="/login">
+          <img class="footer__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
+        <a class="footer__compare-link" href="/compare">
+          <img class="footer__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
+        <a class="footer__basket-link" href="/basket">
+          <img class="footer__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
+      </div>
+      <p class="footer__address">
+        г. Москва, ул. Строителей, 15
+      </p>
+      <ul class="footer__services">
+        <li>
+          <a class="footer__service-link" href="">Доставка</a>
+        </li>
+        <li>
+          <a class="footer__service-link" href="">Гарантия</a>
+        </li>
+        <li>
+          <a class="footer__service-link" href="">Контакты</a>
+        </li>
+      </ul>
+      <p class="footer__phone">
+        Тел.: +7 (495) 495-95-95
+      </p>
+      <ul class="footer__social-bar">
         <li>
           <a href="#">
-            <img src="http://placehold.it/32x32" alt="Страница комании в Facebook">
+            <img src="img/fb.svg" width="32" height="32" alt="Страница комании в Facebook ">
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="http://placehold.it/32x32" alt="Страница комании в Instagram">
+          <a href="# ">
+            <img src="img/instagram.svg " width="32 " height="32 " alt="Страница комании в Instagram ">
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="http://placehold.it/32x32" alt="Страница комании в Twitter">
+          <a href="# ">
+            <img src="img/twitter.svg " width="32 " height="32 " alt="Страница комании в Twitter ">
           </a>
         </li>
       </ul>
-      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="http://placehold.it/27x35" alt="HTML Academy">
+      <a class="footer__copyright " href="https://htmlacademy.ru/intensive/htmlcss ">
+        <img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy ">
       </a>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
