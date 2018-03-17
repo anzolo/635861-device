@@ -9,25 +9,28 @@
 <body>
   <header class="header">
     <div class="header__logo-wrapper">
-      <a class="header__logo-link">Device</a>
+      <a class="header__logo-link" href="/">Device</a>
     </div>
-    <div class="header__search-bar">
-      <img class="header__search-icon" src="http://placehold.it/16x16" alt="">
-      <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-      <button class="header__search-find-button">Найти</button>
-    </div>
+    <form class="header__search-form search-form" method="post" action="https://echo.htmlacademy.ru">
+      <label for="search-field">
+        <img class="search-form__icon" src="img/search.svg" width="16" height="16" alt="">
+      </label>
+      <input class="search-form__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
+      <input type="submit" class="search-form__submit" value="Найти">
+    </form>
     <div class="header__user-menu">
       <a class="header__login-link" href="/login">
-        <img class="header__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
+        <img class="header__login-icon" src="img/user.svg" width="13" height="12" alt="">Войти</a>
       <a class="header__compare-link" href="/compare">
-        <img class="header__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
+        <img class="header__compare-icon" src="img/compare.svg" width="10" height="10" alt="">Сравнить</a>
       <a class="header__basket-link" href="/basket">
-        <img class="header__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
+        <img class="header__basket-icon" src="img/cart.svg" width="12" height="12" alt="">Корзина</a>
     </div>
     <nav class="header__services">
-      <a class="header__catalog-link" href="/catalog">Каталог товаров
-        <img src="http://placehold.it/16x16" alt="">
-      </a>
+      <div class="header__catalog-link">
+        <span>Каталог товаров</span>
+        <img src="img/plus.svg" width="16" height="16" alt="">
+      </div>
       <a class="header__delivery-link" href="/delivery">Доставка</a>
       <a class="header__guarantee-link" href="/guarantee">Гарантия</a>
       <a class="header__contacts-link" href="/contacts">Контакты</a>
@@ -79,25 +82,23 @@
         <div class="product-list__filter-header">
           <h3>Фильтр:</h3>
         </div>
-        <div class="product-list__content">
-          <form action="/catalog/filter">
-            <div class="product-list__separator"></div>
-            <label for="">Стоимость</label>
-            <span>выбор диапазона цен</span>
-            <div class="product-list__separator"></div>
-            <label for="">Цвет</label>
-            <input type="checkbox" name="" id=""> Черный
-            <input type="checkbox" name="" id=""> Белый
-            <input type="checkbox" name="" id=""> Синий
-            <input type="checkbox" name="" id=""> Красный
-            <input type="checkbox" name="" id=""> Розовый
-            <div class="product-list__separator"></div>
-            <label for="">Bluetooth</label>
-            <input type="radio" name="" id=""> Есть
-            <input type="radio" name="" id=""> Нет
-            <button type="submit">Показать</button>
-          </form>
-        </div>
+        <form class="product-list__content filter-form" action="https://echo.htmlacademy.ru" method="post">
+          <span class="filter-form__label">Стоимость</span>
+          <input type="number" name="price">
+
+          <span class="filter-form__label">Цвет</span>
+          <input type="checkbox" name="color_black"> Черный
+          <input type="checkbox" name="color_white"> Белый
+          <input type="checkbox" name="color_blue"> Синий
+          <input type="checkbox" name="color_red"> Красный
+          <input type="checkbox" name="color_pink"> Розовый
+          
+          <span class="filter-form__label">Bluetooth</span>
+          <input type="radio" name="bluetooth" value="yes" checked> Есть
+          <input type="radio" name="bluetooth" value="no"> Нет
+
+          <input class="button" type="submit" value="Показать">
+        </form>
       </aside>
       <div class="product-list__list">
         <div class="product-list__list-header">
@@ -120,11 +121,11 @@
           <div class="products">
             <div class="products__item item-products">
               <div class="item-products__pic">
-                <img src="img/item-1-jpg.jpg" width="360" height="380" alt="">
+                <img src="img/item-1-jpg.jpg" width="360" height="380" alt="Фото Любительская селфи-палка">
               </div>
               <div>
-                  <h3>Любительская селфи-палка</h3>
-                  <span>500 руб.</span>
+                <h3>Любительская селфи-палка</h3>
+                <span>500 руб.</span>
               </div>
               <div class="product-list__controls">
                 <button class="product-list__add-to-basket">В корзину</button>
@@ -133,60 +134,62 @@
             </div>
 
             <div class="products__item item-products">
-                <div class="item-products__pic">
-                  <img src="img/item-2-jpg.jpg" width="360" height="380" alt="">
-                </div>
-                <div>
-                    <h3>Профессиональная селфи-палка</h3>
-                    <span>1 500 руб.</span>
-                </div>
-                <div class="product-list__controls">
-                  <button class="product-list__add-to-basket">В корзину</button>
-                  <button class="product-list__add-to-compare">Добавить к сравнению</button>
-                </div>
+              <div class="item-products__pic">
+                <img src="img/item-2-jpg.jpg" width="360" height="380" alt="Фото Профессиональная селфи-палка">
               </div>
+              <div>
+                <h3>Профессиональная селфи-палка</h3>
+                <span>1 500 руб.</span>
+              </div>
+              <div class="product-list__controls">
+                <button class="product-list__add-to-basket">В корзину</button>
+                <button class="product-list__add-to-compare">Добавить к сравнению</button>
+              </div>
+            </div>
 
-              <div class="products__item item-products">
-                  <div class="item-products__pic">
-                    <img src="img/item-3-jpg.jpg" width="360" height="380" alt="">
-                  </div>
-                  <div>
-                      <h3>Непотопляемая селфи-палка</h3>
-                      <span>2 500 руб.</span>
-                  </div>
-                  <div class="product-list__controls">
-                    <button class="product-list__add-to-basket">В корзину</button>
-                    <button class="product-list__add-to-compare">Добавить к сравнению</button>
-                  </div>
-                </div>
+            <div class="products__item item-products">
+              <div class="item-products__pic">
+                <img src="img/item-3-jpg.jpg" width="360" height="380" alt="Фото Непотопляемая селфи-палка">
+              </div>
+              <div>
+                <h3>Непотопляемая селфи-палка</h3>
+                <span>2 500 руб.</span>
+              </div>
+              <div class="product-list__controls">
+                <button class="product-list__add-to-basket">В корзину</button>
+                <button class="product-list__add-to-compare">Добавить к сравнению</button>
+              </div>
+            </div>
 
-                <div class="products__item item-products">
-                    <div class="item-products__pic">
-                      <img src="img/item-4-jpg.jpg" width="360" height="380" alt="">
-                      <img class="product-list__is-new" src="img/is-new.png" width="60" height="60" alt="">
-                    </div>
-                    <div>
-                        <h3>Селфи-палка «Следуй за мной»</h3>
-                        <span>4 900 руб.</span>
-                    </div>
-                    <div class="product-list__controls">
-                      <button class="product-list__add-to-basket">В корзину</button>
-                      <button class="product-list__add-to-compare">Добавить к сравнению</button>
-                    </div>
-                  </div>
+            <div class="products__item item-products">
+              <div class="item-products__pic">
+                <img src="img/item-4-jpg.jpg" width="360" height="380" alt="Фото Селфи-палка «Следуй за мной»">
+                <img class="product-list__is-new" src="img/is-new.png" width="60" height="60" alt="">
+              </div>
+              <div>
+                <h3>Селфи-палка «Следуй за мной»</h3>
+                <span>4 900 руб.</span>
+              </div>
+              <div class="product-list__controls">
+                <button class="product-list__add-to-basket">В корзину</button>
+                <button class="product-list__add-to-compare">Добавить к сравнению</button>
+              </div>
+            </div>
 
           </div>
           <div class="product-list__pagination">
             <a class="product-list__back" href="/catalog?page=1">Назад</a>
             <ul class="product-list__pages">
               <li class="product-list__page">
-                1
+                <a href="#">1</a>
               </li>
               <li class="product-list__page">
-                2
+                <a href="#">
+                  2
+                </a>
               </li>
               <li class="product-list__page">
-                3
+                <a href="#">3</a>
               </li>
             </ul>
             <a class="product-list__forward" href="/catalog?page=2">Вперед</a>
@@ -196,55 +199,55 @@
     </section>
   </main>
   <footer class="footer">
-      <h2 class="visually-hidden">Подвал</h2>
-      <div class="footer_decorative-line"></div>
-      <div class="footer__logo">Device</div>
-      <div class="footer__menu">
-        <a class="footer__login-link" href="/login">
-          <img class="footer__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
-        <a class="footer__compare-link" href="/compare">
-          <img class="footer__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
-        <a class="footer__basket-link" href="/basket">
-          <img class="footer__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
-      </div>
-      <p class="footer__address">
-        г. Москва, ул. Строителей, 15
-      </p>
-      <ul class="footer__services">
-        <li>
-          <a class="footer__service-link" href="">Доставка</a>
-        </li>
-        <li>
-          <a class="footer__service-link" href="">Гарантия</a>
-        </li>
-        <li>
-          <a class="footer__service-link" href="">Контакты</a>
-        </li>
-      </ul>
-      <p class="footer__phone">
-        Тел.: +7 (495) 495-95-95
-      </p>
-      <ul class="footer__social-bar">
-        <li>
-          <a href="#">
-            <img src="img/fb.svg" width="32" height="32" alt="Страница комании в Facebook ">
-          </a>
-        </li>
-        <li>
-          <a href="# ">
-            <img src="img/instagram.svg " width="32 " height="32 " alt="Страница комании в Instagram ">
-          </a>
-        </li>
-        <li>
-          <a href="# ">
-            <img src="img/twitter.svg " width="32 " height="32 " alt="Страница комании в Twitter ">
-          </a>
-        </li>
-      </ul>
-      <a class="footer__copyright " href="https://htmlacademy.ru/intensive/htmlcss ">
-        <img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy ">
-      </a>
-    </footer>
+    <h2 class="visually-hidden">Подвал</h2>
+    <div class="footer_decorative-line"></div>
+    <div class="footer__logo">Device</div>
+    <div class="footer__menu">
+      <a class="footer__login-link" href="/login">
+        <img class="footer__login-icon" src="img/user.svg" width="13" height="12" alt="">Войти</a>
+      <a class="footer__compare-link" href="/compare">
+        <img class="footer__compare-icon" src="img/compare.svg" width="10" height="10" alt="">Сравнить</a>
+      <a class="footer__basket-link" href="/basket">
+        <img class="footer__basket-icon" src="img/cart.svg" width="12" height="12" alt="">Корзина</a>
+    </div>
+    <p class="footer__address">
+      г. Москва, ул. Строителей, 15
+    </p>
+    <ul class="footer__services">
+      <li>
+        <a class="footer__service-link" href="">Доставка</a>
+      </li>
+      <li>
+        <a class="footer__service-link" href="">Гарантия</a>
+      </li>
+      <li>
+        <a class="footer__service-link" href="">Контакты</a>
+      </li>
+    </ul>
+    <p class="footer__phone">
+      Тел.: +7 (495) 495-95-95
+    </p>
+    <ul class="footer__social-bar">
+      <li>
+        <a href="#">
+          <img src="img/fb.svg" width="32" height="32" alt="Страница комании в Facebook ">
+        </a>
+      </li>
+      <li>
+        <a href="# ">
+          <img src="img/instagram.svg " width="32 " height="32 " alt="Страница комании в Instagram ">
+        </a>
+      </li>
+      <li>
+        <a href="# ">
+          <img src="img/twitter.svg " width="32 " height="32 " alt="Страница комании в Twitter ">
+        </a>
+      </li>
+    </ul>
+    <a class="footer__copyright " href="https://htmlacademy.ru/intensive/htmlcss ">
+      <img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy ">
+    </a>
+  </footer>
 </body>
 
 </html>

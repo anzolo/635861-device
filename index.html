@@ -11,23 +11,26 @@
     <div class="header__logo-wrapper">
       <a class="header__logo-link">Device</a>
     </div>
-    <div class="header__search-bar">
-      <img class="header__search-icon" src="http://placehold.it/16x16" alt="">
-      <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-      <button class="header__search-find-button">Найти</button>
-    </div>
+    <form class="header__search-form search-form" method="post" action="https://echo.htmlacademy.ru">
+      <label for="search-field">
+        <img class="search-form__icon" src="img/search.svg" width="16" height="16" alt="">
+      </label>
+      <input class="search-form__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
+      <input type="submit" class="search-form__submit" value="Найти">
+    </form>
     <div class="header__user-menu">
       <a class="header__login-link" href="/login">
-        <img class="header__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
+        <img class="header__login-icon" src="img/user.svg" width="13" height="12" alt="">Войти</a>
       <a class="header__compare-link" href="/compare">
-        <img class="header__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
+        <img class="header__compare-icon" src="img/compare.svg" width="10" height="10" alt="">Сравнить</a>
       <a class="header__basket-link" href="/basket">
-        <img class="header__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
+        <img class="header__basket-icon" src="img/cart.svg" width="12" height="12" alt="">Корзина</a>
     </div>
     <nav class="header__services">
-      <a class="header__catalog-link" href="/catalog">Каталог товаров
-        <img src="http://placehold.it/16x16" alt="">
-      </a>
+      <div class="header__catalog-link">
+        <span>Каталог товаров</span>
+        <img src="img/plus.svg" width="16" height="16" alt="">
+      </div>
       <a class="header__delivery-link" href="/delivery">Доставка</a>
       <a class="header__guarantee-link" href="/guarantee">Гарантия</a>
       <a class="header__contacts-link" href="/contacts">Контакты</a>
@@ -66,6 +69,7 @@
       <div id="slide1" class="promo-slider__slide">
         <img src="img/slider-1.png" height="486" width="384" alt="Фото палки для селфи">
         <article>
+          <span>01</span>
           <h2>Делай селфи, как Бен Стиллер!</h2>
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
@@ -87,6 +91,7 @@
       <div id="slide2" class="promo-slider__slide">
         <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
         <article>
+          <span>02</span>
           <h2>Худеем правильно!
           </h2>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
@@ -105,6 +110,7 @@
       <div id="slide3" class="promo-slider__slide">
         <img src="img/slider-3.png" width="526" height="334" alt="Фото квадракоптера">
         <article>
+          <span>03</span>
           <h2>Порхает как бабочка, жалит как пчела!</h2>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
@@ -124,38 +130,24 @@
     </section>
     <section class="popular-products">
       <h2 class="visually-hidden">Список популярных категорий</h2>
-      <ul>
-        <li>
-          <a class="popular-products__link" href="/categories/vr">
-            <img src="img/popular-1.svg" width="160" height="160" alt=""> Виртуальная реальность
-          </a>
-        </li>
-        <li>
-          <a class="popular-products__link" href="/categories/monopods">
-            <img src="img/popular-2.svg" width="160" height="160" alt=""> Моноподы для селфи
-          </a>
-        </li>
-        <li>
-          <a class="popular-products__link" href="/categories/actioncameras">
-            <img src="img/popular-3.svg" width="160" height="160" alt=""> Экшн-камеры
-          </a>
-        </li>
-        <li>
-          <a class="popular-products__link" href="/categories/fitnessBraces">
-            <img src="img/popular-4.svg" width="160" height="160" alt=""> Фитнес-браслеты
-          </a>
-        </li>
-        <li>
-          <a class="popular-products__link" href="/categories/smartWatches">
-            <img src="img/popular-5.svg" width="160" height="160" alt=""> Умные часы
-          </a>
-        </li>
-        <li>
-          <a class="popular-products__link" href="/categories/quadrocopters">
-            <img src="img/poppular-6.svg" width="160" height="160" alt=""> Квадрокоптеры
-          </a>
-        </li>
-      </ul>
+      <a class="popular-products__link" href="/categories/vr">
+        <img src="img/popular-1.svg" width="160" height="160" alt="Виртуальная реальность"> Виртуальная реальность
+      </a>
+      <a class="popular-products__link" href="/categories/monopods">
+        <img src="img/popular-2.svg" width="160" height="160" alt="Моноподы для селфи"> Моноподы для селфи
+      </a>
+      <a class="popular-products__link" href="/categories/actioncameras">
+        <img src="img/popular-3.svg" width="160" height="160" alt="Экшн-камеры"> Экшн-камеры
+      </a>
+      <a class="popular-products__link" href="/categories/fitnessBraces">
+        <img src="img/popular-4.svg" width="160" height="160" alt="Фитнес-браслеты"> Фитнес-браслеты
+      </a>
+      <a class="popular-products__link" href="/categories/smartWatches">
+        <img src="img/popular-5.svg" width="160" height="160" alt="Умные часы"> Умные часы
+      </a>
+      <a class="popular-products__link" href="/categories/quadrocopters">
+        <img src="img/poppular-6.svg" width="160" height="160" alt="Квадрокоптеры"> Квадрокоптеры
+      </a>
     </section>
     <section class="services">
       <h2 class="visually-hidden">Список предоставляемых сервисов</h2>
@@ -193,10 +185,18 @@
     </section>
     <section class="partners">
       <h2 class="visually-hidden">Список наших партнеров</h2>
-      <img class="partners__logo" src="img/logo-1.jpg" width="260" height="100" alt="">
-      <img class="partners__logo" src="img/logo-3.jpg" width="260" height="100" alt="">
-      <img class="partners__logo" src="img/logo-2.jpg" width="260" height="100" alt="">
-      <img class="partners__logo" src="img/logo-4.jpg" width="260" height="100" alt="">
+      <a href="#">
+        <img class="partners__logo" src="img/logo-1.jpg" width="260" height="100" alt="Логотип партнера DJI">
+      </a>
+      <a href="#">
+        <img class="partners__logo" src="img/logo-3.jpg" width="260" height="100" alt="Логотип партнера SP GADGETS">
+      </a>
+      <a href="#">
+        <img class="partners__logo" src="img/logo-2.jpg" width="260" height="100" alt="Логотип партнера GoPro">
+      </a>
+      <a href="#">
+        <img class="partners__logo" src="img/logo-4.jpg" width="260" height="100" alt="Логотип партнера VIVE">
+      </a>
     </section>
     <section class="addon">
       <h2 class="visually-hidden">О нас и контакты</h2>
@@ -233,11 +233,11 @@
     <div class="footer__logo">Device</div>
     <div class="footer__menu">
       <a class="footer__login-link" href="/login">
-        <img class="footer__login-icon" src="http://placehold.it/13x12" alt="">Войти</a>
+        <img class="footer__login-icon" src="img/user.svg" width="13" height="12" alt="">Войти</a>
       <a class="footer__compare-link" href="/compare">
-        <img class="footer__compare-icon" src="http://placehold.it/10x10" alt="">Сравнить</a>
+        <img class="footer__compare-icon" src="img/compare.svg" width="10" height="10" alt="">Сравнить</a>
       <a class="footer__basket-link" href="/basket">
-        <img class="footer__basket-icon" src="http://placehold.it/12x12" alt="">Корзина</a>
+        <img class="footer__basket-icon" src="img/cart.svg" width="12" height="12" alt="">Корзина</a>
     </div>
     <p class="footer__address">
       г. Москва, ул. Строителей, 15
@@ -277,25 +277,25 @@
       <img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy ">
     </a>
   </footer>
-  <section "modal-write-us ">
+  <section "modal-write-us">
     <h2 class="visually-hidden ">Всплывающее окно обратной связи</h2>
     <button class="modal-write-us__close-button ">Закрыть</button>
-    <form class="modal-write-us__form " action="/writeus " method="post ">
-      <div class="modal-write-us__contacts ">
+    <form class="modal-write-us__form feedback-form" action="https://echo.htmlacademy.ru" method="post ">
+      <div class="feedback-form__contacts ">
         <p>
-          <label for="modal-write-us__name ">Ваше имя:</label>
-          <input type="text " name="name " id="modal-write-us__name " placeholder="Имя Фамилия ">
+          <label for="feedback-form__name">Ваше имя:</label>
+          <input type="text" name="name" id="feedback-form__name" placeholder="Имя Фамилия">
         </p>
         <p>
-          <label for="modal-write-us__email ">Ваш e-mail:</label>
-          <input type="email " name="email " id="modal-write-us__email " placeholder="email@example.com ">
+          <label for="feedback-form__email ">Ваш e-mail:</label>
+          <input type="email" name="email" id="feedback-form__email" placeholder="email@example.com">
         </p>
       </div>
       <p>
-        <label for="modal-write-us__message ">Текст письма:</label>
-        <textarea name="message " id="modal-write-us__message " cols="30 " rows="10 " placeholder="В свободной форме "></textarea>
+        <label for="feedback-form__message ">Текст письма:</label>
+        <textarea name="message" id="feedback-form__message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button type="submit ">Отправить</button>
+      <input type="submit" value="Отправить">
     </form>
   </section>
   <section class="modal-map ">
