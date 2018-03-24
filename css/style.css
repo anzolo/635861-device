@@ -64,7 +64,8 @@ a {
 }
 
 h2 {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
+  ;
   font-size: 47px;
   font-weight: 800;
   line-height: 56px;
@@ -337,6 +338,7 @@ h2 {
   display: none;
   height: 154px;
   width: 1160px;
+  z-index: 5;
 }
 
 /* .header__products-catalog:before {
@@ -377,14 +379,14 @@ h2 {
 
 /* слайдер с товарами */
 
-.promo-slider__slide {
-  display: flex;
-  width: 1160px;
-  height: 486px;
+.promo-slider {
+  position: relative;
+  height: 600px;
 }
 
-.promo-slider__slide article {
-  width: 479px;
+.promo-slider__slide {
+  display: flex;
+  position: relative;
 }
 
 .slide__button {
@@ -393,22 +395,87 @@ h2 {
 }
 
 .promo-slider__values td {
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 36px;
   font-weight: 300;
   line-height: 48px;
-  /* Text style for "8,5 м" */
   letter-spacing: 0.36px;
 }
 
 .promo-slider__description td {
   color: #464646;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 300;
   line-height: 20px;
   letter-spacing: 0.13px;
+  padding-top: 10px;
 }
+
+.promo-slider__selfie {
+  position: absolute;
+  height: 486px;
+  width: 1010px;
+  top: -111px;
+  left: 90px;
+}
+
+.promo-slider__selfie article {
+  margin-left: 126px;
+  margin-top: 41px;
+}
+
+.promo-slider__selfie h2 {
+  margin-bottom: 0;
+}
+
+.promo-slider__selfie p {
+  margin-top: 19px;
+}
+
+.promo-slider__selfie a {
+  margin-top: 29px;
+}
+
+.promo-slider__selfie table {
+  width: 550px;
+  margin-left: -3px;
+  margin-top: 50px;
+}
+
+.promo-slider__selfie td {
+  padding: 0;
+}
+
+.promo-slider__selfie article:before {
+  position: absolute;
+  content: "01";
+  color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 179.2px;
+  letter-spacing: 0.36px;
+  top: -12px;
+  left: 840px;
+}
+
+.promo-slider__selfie article:after {
+  position: absolute;
+  content: "";
+  color: #ffffff;
+  width: 81px;
+  height: 12px;
+  top: 328px;
+  left: 908px;
+  background: left / contain url("../img/slider-button.svg") no-repeat, 33px / contain url("../img/slider-button-empty.svg") no-repeat, 67px / contain url("../img/slider-button-empty.svg") no-repeat;
+}
+
+.promo-slider__selfie h2 {
+  width: 390px;
+}
+
+/* популярные категории */
 
 .popular-products {
   width: 1160px;
@@ -420,7 +487,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 160px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
