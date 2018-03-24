@@ -110,7 +110,7 @@ h2 {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-  background-image: url(../img/button_bg.jpg);
+  background-image: url(../img/button_bg.png);
   background-position: center;
 }
 
@@ -675,11 +675,11 @@ h2 {
   margin-bottom: 33px;
 }
 
-.popular-products__link:hover .popular-products__img-wrapper {
+.popular-products__link:hover:before {
   background-color: #f0c52e;
 }
 
-.popular-products__link:active img {
+.popular-products__link:active:before {
   opacity: 0.3;
 }
 
@@ -687,20 +687,24 @@ h2 {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.popular-products__img-wrapper img {
-  margin: auto;
-}
-
 /* Услуги */
 
-img.flip-bottom {
+/* img.flip-bottom {
   margin-bottom: 0px;
-}
+} */
 
 .services {
   height: 388px;
-  widows: 1160px;
+  width: 1440px;
+  margin-top: 81px;
+  background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5);
+  margin-left: -140px;
+}
+
+.services__wrapper {
   display: flex;
+  margin-left: 139px;
+  position: relative;
 }
 
 /* .services h2:after {
@@ -714,7 +718,20 @@ img.flip-bottom {
   display: flex;
   flex-direction: column;
   padding-top: 80px;
-  border-right: 7px solid black;
+}
+
+/* .services__wrapper aside {
+  margin-left: 9px;
+} */
+
+.services__wrapper:before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  /* top:10px; */
+  left: 278px;
+  width: 7px;
+  height: 319px;
 }
 
 .services__menu .services__menu-item {
@@ -738,4 +755,33 @@ img.flip-bottom {
   margin-left: 116px;
   margin-top: 70px;
   margin-bottom: 82px;
+}
+
+.services__delivery {
+  margin-left: 120px;
+  position: relative;
+}
+
+.services__delivery h2 {
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.services__delivery p {
+  width: 426px;
+  height: 75px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  padding-left: 4px;
+  margin-top:26px;
+}
+
+.services__delivery:after {
+  content: "";
+  position: absolute;
+  background: url("../img/delivery.svg") no-repeat;
+  top:15px;
+  left: 561px;
+  width: 136px;
+  height: 164px;
 }
