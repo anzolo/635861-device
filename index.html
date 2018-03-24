@@ -10,62 +10,62 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header container">
     <a class="header__logo-link logo-text dynamic-opacity-change">Device</a>
 
-    <div class="header_controls-wrapper">
-      <form class="header__search-form search-form" method="post" action="https://echo.htmlacademy.ru">
-        <input class="search-form__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
-        <label class="search-form__label" for="search-field">
-          <img class="search-form__icon" src="img/search.svg" width="16" height="16" alt="">
-        </label>
-        <input type="submit" class="search-form__submit" value="Найти">
-      </form>
-      <div class="header__user-menu fade-link-below">
-        <a class="header__login-link" href="/login">Войти</a>
-        <a class="header__compare-link" href="/compare">Сравнить</a>
-        <a class="header__basket-link" href="/basket">Корзина</a>
+    <div class="header__menu-wrapper">
+      <div class="header__user-menu">
+        <form class="header__search-form search-form" method="post" action="https://echo.htmlacademy.ru">
+          <input class="search-form__input" type="text" name="search" placeholder="Поиск по сайту">
+          <input type="submit" class="search-form__submit" value="Найти">
+          <div class="search-form__icon"></div>
+        </form>
+        <div class="header__user-actions fade-link-below">
+          <a class="header__login-link" href="/login">Войти</a>
+          <a class="header__compare-link" href="/compare">Сравнить</a>
+          <a class="header__basket-link" href="/basket">Корзина</a>
+        </div>
       </div>
       <div class="header__services-menu fade-link-below">
         <a class="header__catalog important-text" href="/catalog">Каталог товаров</a>
+        <nav class="header__products-catalog fade-link-below">
+          <ul class="header__product-category">
+            <li>
+              <a href="">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="">Экшн-камеры</a>
+            </li>
+          </ul>
+          <ul class="header__product-category">
+            <li>
+              <a href="">Фитнес-браслеты</a>
+            </li>
+            <li>
+              <a href="">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="header__product-category">
+            <li>
+              <a href="">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </nav>
         <a class="header__delivery-link important-text" href="/delivery">Доставка</a>
         <a class="header__guarantee-link important-text" href="/guarantee">Гарантия</a>
         <a class="header__contacts-link important-text" href="/contacts">Контакты</a>
       </div>
     </div>
 
-    <nav class="header__services fade-link-below">
-      <ul class="header__category-stack">
-        <li>
-          <a href="">Виртуальная реальность</a>
-        </li>
-        <li>
-          <a href="">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a href="">Экшн-камеры</a>
-        </li>
-      </ul>
-      <ul class="header__category-stack">
-        <li>
-          <a href="">Фитнес-браслеты</a>
-        </li>
-        <li>
-          <a href="">Умные часы</a>
-        </li>
-      </ul>
-      <ul class="header__category-stack">
-        <li>
-          <a href="">Квадрокоптеры</a>
-        </li>
-      </ul>
-    </nav>
   </header>
-  <main>
+  <main class="container">
     <section class="promo-slider">
       <span class="promo-slider__control"></span>
       <h1 class="visually-hidden">Промо слайдер</h1>
-      <div id="slide1" class="promo-slider__slide slide">
+      <div id="slide1" class="promo-slider__slide promo-slider__selfie">
         <img src="img/slider-1.png" height="486" width="384" alt="Фото палки для селфи">
         <article>
           <span>01</span>
@@ -87,7 +87,7 @@
           </table>
         </article>
       </div>
-      <div id="slide2" class="promo-slider__slide">
+      <div id="slide2" class="visually-hidden promo-slider__slide">
         <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
         <article>
           <span>02</span>
@@ -106,7 +106,7 @@
           </table>
         </article>
       </div>
-      <div id="slide3" class="promo-slider__slide">
+      <div id="slide3" class="visually-hidden promo-slider__slide">
         <img src="img/slider-3.png" width="526" height="334" alt="Фото квадракоптера">
         <article>
           <span>03</span>
@@ -136,7 +136,7 @@
         Моноподы для селфи
       </a>
       <a class="popular-products__actioncameras" href="/categories/actioncameras">
-         Экшн-камеры
+        Экшн-камеры
       </a>
       <a class="popular-products__fitnessBraces" href="/categories/fitnessBraces">
         Фитнес-браслеты
@@ -236,7 +236,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer container">
     <h2 class="visually-hidden">Подвал</h2>
     <div class="footer_decorative-line"></div>
     <div class="footer__logo logo-text">Device</div>

@@ -2,44 +2,46 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans Light"), local("OpenSans-Light"),
-    url("http://hb.bizmrg.com/fonts/opensans/300.woff2") format("woff2"),
-    url("http://hb.bizmrg.com/fonts/opensans/300.woff") format("woff");
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("http://hb.bizmrg.com/fonts/opensans/300.woff2") format("woff2"), url("http://hb.bizmrg.com/fonts/opensans/300.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Gilroy";
-  src: local("Gilroy Light"), local("Gilroy-Light"),
-    url("http://hb.bizmrg.com/fonts/gilroy/300.woff2") format("woff2"),
-    url("http://hb.bizmrg.com/fonts/gilroy/300.woff") format("woff");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("http://hb.bizmrg.com/fonts/gilroy/300.woff2") format("woff2"), url("http://hb.bizmrg.com/fonts/gilroy/300.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Gilroy";
-  src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
-    url("http://hb.bizmrg.com/fonts/gilroy/800.woff2") format("woff2"),
-    url("http://hb.bizmrg.com/fonts/gilroy/800.woff") format("woff");
+  src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"), url("http://hb.bizmrg.com/fonts/gilroy/800.woff2") format("woff2"), url("http://hb.bizmrg.com/fonts/gilroy/800.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 /* common*/
 
+html,
+body {
+  min-width: 1440px;
+  min-height: 1750px;
+}
+
 .visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
 
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -47,8 +49,13 @@ body {
   /* letter-spacing: 0.15px; */
   color: #000000;
   /* text-transform: uppercase; */
-
   background-color: #ffffff;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 a {
@@ -70,7 +77,6 @@ h2 {
   font-weight: 800;
   line-height: 24px;
   text-transform: uppercase;
-
   letter-spacing: 3.6px;
 }
 
@@ -96,7 +102,6 @@ h2 {
   display: inline-block;
   padding-top: 8px;
   padding-bottom: 8px;
-
   color: #000000;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
@@ -104,7 +109,6 @@ h2 {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-
   background-image: url(../img/button_bg.jpg);
   background-position: center;
 }
@@ -112,11 +116,13 @@ h2 {
 .button-default:hover {
   background: #f0c52e;
 }
+
 .button-default:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
 /* logo*/
+
 .logo-text {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
@@ -135,43 +141,41 @@ h2 {
 }
 
 /* header */
-.header_controls-wrapper {
+
+.header {
+  position: relative;
+  margin-top: 40px;
+}
+
+.header__logo-link {
+  position: absolute;
+  left: 69px;
+  top: -23px;
+}
+
+.header__menu-wrapper {
   background-color: #f7e296;
   height: 299px;
-  width: 1160px;
+}
+
+.header__user-menu {
+  display: flex;
+  /* align-items: baseline; */
+  padding-top: 35px;
 }
 
 .header__search-form {
   display: flex;
-  height: 49px;
+  position: relative;
+  height: 50px;
+  margin-left: 63px;
+  min-width: 441px;
 }
 
 .search-form__input {
   background-color: transparent;
   border: none;
   order: 2;
-}
-
-.search-form__label {
-  padding-right: 20px;
-  padding-left: 5px;
-  order: 1;
-  display: flex;
-  /* align-content: center;
-  align-self: center; */
-  justify-content: space-around;
-  align-items: center;
-}
-
-.search-form__submit {
-  order: 3;
-  display: none;
-  border: none;
-  background-color: #f7e296;
-  width: 85px;
-}
-
-.search-form__input {
   opacity: 0.3;
   width: 316px;
 }
@@ -185,14 +189,42 @@ h2 {
   box-shadow: none;
   border-color: transparent;
   opacity: 1;
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
 }
 
-.search-form__input:focus ~ .search-form__label {
-  border-bottom: 2px solid black;
+.search-form__submit {
+  order: 3;
+  display: none;
+  border: none;
+  background-color: #f7e296;
+  width: 85px;
 }
 
-.search-form__input:focus ~ .search-form__submit {
+.search-form__icon {
+  order: 1;
+  display: inline-block;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  padding-right: 20px;
+  /* padding-bottom: 10px; */
+  margin-top: 18px;
+}
+
+.search-form__input:focus~.search-form__icon:after,
+.search-form__submit:active~.search-form__icon:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 360px;
+  top: 48px;
+  left: -4px;
+}
+
+.search-form__input:focus~.search-form__submit {
   display: block;
   border: 2px solid black;
 }
@@ -209,53 +241,141 @@ h2 {
   color: rgba(255, 255, 255, 0.3);
 }
 
+/* кнопки пользователя - войти, корзина, сравнить */
+
+.header__user-actions {
+  display: flex;
+  margin-top: 9px;
+  margin-left: 96px;
+}
+
 .header__login-link:before {
   display: inline-block;
-  content: " ";
+  content: "";
   background: url(../img/user.svg) no-repeat;
-
+  background-position-y: 1px;
   height: 13px;
   width: 12px;
+  padding-right: 14px;
+}
+
+.header__compare-link {
+  margin-left: 219px;
 }
 
 .header__compare-link:before {
   display: inline-block;
-  content: " ";
+  content: "";
   background: url(../img/compare.svg) no-repeat;
-
   height: 10px;
   width: 10px;
+  padding-right: 10px;
+}
+
+.header__basket-link {
+  margin-left: 42px;
 }
 
 .header__basket-link:before {
   display: inline-block;
   content: " ";
   background: url(../img/cart.svg) no-repeat;
-
   height: 12px;
   width: 12px;
+  padding-right: 10px;
+}
+
+/* вторая строка меню - каталог, доставка, гарантия, контакты */
+
+.header__services-menu {
+  display: flex;
+  margin-top: 28px;
+  position: relative;
+}
+
+.header__services-menu>a {
+  /* display: block; */
+}
+
+.header__catalog {
+  margin-left: 59px;
+  position: relative;
 }
 
 .header__catalog:after {
-  display: inline-block;
-  content: " ";
+  display: block;
+  position: absolute;
+  content: "";
   background: url(../img/plus.svg) no-repeat;
   opacity: 0.3;
-
   height: 16px;
   width: 16px;
+  top: 4px;
+  left: 231px;
 }
 
-.header__services {
-  background-color: #f7e296;
+.header__catalog:hover~.header__products-catalog {
   display: flex;
-  height: 129px;
+}
+
+.header__delivery-link {
+  margin-left: 322px;
+}
+
+.header__guarantee-link {
+  margin-left: 34px;
+}
+
+.header__contacts-link {
+  margin-left: 109px;
+}
+
+.header__products-catalog {
+  position: absolute;
+  top: 32px;
+  background-color: #f7e296;
+  display: none;
+  height: 154px;
   width: 1160px;
 }
 
-.header__services ul {
+/* .header__products-catalog:before {
+  position: absolute;
+  content: "";
+  height: 46px;
+  width: 249px;
+  background-color: black;
+  top:-30px;
+  left:35px;
+} */
+
+.header__products-catalog li {
+  padding-bottom: 7px;
+}
+
+.header__products-catalog ul {
   list-style: none;
 }
+
+.header__products-catalog ul:nth-child(1) {
+  margin-right: 23px;
+}
+
+.header__products-catalog ul:nth-child(2) {
+  margin-right: 37px;
+}
+
+.header__menu-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 226px;
+  left: 610px;
+  height: 7px;
+  width: 100px;
+  background-color: white;
+}
+
+/* слайдер с товарами */
 
 .promo-slider__slide {
   display: flex;
@@ -300,7 +420,6 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 160px;
-
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -313,7 +432,6 @@ h2 {
   width: 160px;
   height: 160px;
   background-color: rgba(240, 197, 46, 0.5);
-
   margin-bottom: 33px;
 }
 
@@ -353,7 +471,6 @@ img.flip-bottom {
   width: 278px;
   display: flex;
   flex-direction: column;
-
   padding-top: 80px;
   border-right: 7px solid black;
 }
@@ -364,19 +481,19 @@ img.flip-bottom {
   padding-right: 25px; */
 }
 
-.services__menu > div:hover {
-    width: 278px;
-    background-color: black;
+.services__menu>div:hover {
+  width: 278px;
+  background-color: black;
 }
 
-.services__menu > div:hover .services__menu-item {
-    color: #f7e184;
-    background: black;  
+.services__menu>div:hover .services__menu-item {
+  color: #f7e184;
+  background: black;
 }
 
 .service-slide {
-    width:800px;
-    margin-left: 116px;
-    margin-top: 70px;
-    margin-bottom: 82px;
+  width: 800px;
+  margin-left: 116px;
+  margin-top: 70px;
+  margin-bottom: 82px;
 }
