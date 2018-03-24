@@ -382,6 +382,8 @@ h2 {
 .promo-slider {
   position: relative;
   height: 600px;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .promo-slider__slide {
@@ -473,6 +475,145 @@ h2 {
 
 .promo-slider__selfie h2 {
   width: 390px;
+}
+
+.promo-slider__brace {
+  position: absolute;
+  height: 486px;
+  width: 1010px;
+  top: -98px;
+  left: 116px;
+}
+
+.promo-slider__brace article {
+  margin-left: 139px;
+  margin-top: 28px;
+}
+
+.promo-slider__brace h2 {
+  margin-bottom: 0;
+}
+
+.promo-slider__brace p {
+  margin-top: 19px;
+  width: 444px;
+}
+
+.promo-slider__brace a {
+  margin-top: 29px;
+}
+
+.promo-slider__brace table {
+  width: 550px;
+  margin-left: -3px;
+  margin-top: 47px;
+}
+
+.promo-slider__brace td {
+  padding: 0;
+}
+
+.promo-slider__brace article:before {
+  position: absolute;
+  content: "02";
+  color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 179.2px;
+  letter-spacing: 0.36px;
+  top: -26px;
+  left: 791px;
+}
+
+.promo-slider__brace article:after {
+  position: absolute;
+  content: "";
+  color: #ffffff;
+  width: 81px;
+  height: 12px;
+  top: 315px;
+  left: 883px;
+  background: left / contain url("../img/slider-button-empty.svg") no-repeat, 33px / contain url("../img/slider-button.svg") no-repeat, 67px / contain url("../img/slider-button-empty.svg") no-repeat;
+}
+
+.promo-slider__brace h2 {
+  width: 390px;
+}
+
+.promo-slider__quadro {
+  position: absolute;
+  height: 486px;
+  width: 1010px;
+  top: -45px;
+  left: 32px;
+}
+
+.promo-slider__quadro article {
+  margin-left: 42px;
+  margin-top: -25px;
+}
+
+.promo-slider__quadro h2 {
+  margin-bottom: 0;
+  width: 500px;
+}
+
+.promo-slider__quadro p {
+  margin-top: 19px;
+  width: 444px;
+}
+
+.promo-slider__quadro a {
+  margin-top: 29px;
+}
+
+.promo-slider__quadro table {
+  width: 330px;
+  margin-left: -3px;
+  margin-top: 47px;
+}
+
+.promo-slider__quadro td {
+  padding: 0;
+}
+
+.promo-slider__quadro .promo-slider__number {
+  position: absolute;
+  /* content: "03"; */
+  color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 179.2px;
+  letter-spacing: 0.36px;
+  top: -78px;
+  left: 871px;
+  z-index: -1;
+}
+
+/* .promo-slider__quadro article:before {
+  position: absolute;
+  content: "03";
+  color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 179.2px;
+  letter-spacing: 0.36px;
+  top: -78px;
+  left: 871px;
+} */
+
+.promo-slider__quadro article:after {
+  position: absolute;
+  content: "";
+  color: #ffffff;
+  width: 81px;
+  height: 12px;
+  top: 262px;
+  left: 967px;
+  background: left / contain url("../img/slider-button-empty.svg") no-repeat, 33px / contain url("../img/slider-button-empty.svg") no-repeat, 67px / contain url("../img/slider-button.svg") no-repeat;
 }
 
 /* популярные категории */

@@ -63,7 +63,6 @@
   </header>
   <main class="container">
     <section class="promo-slider">
-      <span class="promo-slider__control"></span>
       <h1 class="visually-hidden">Промо слайдер</h1>
       <div id="slide1" class="promo-slider__slide promo-slider__selfie">
         <img src="img/slider-1.png" height="486" width="384" alt="Фото палки для селфи">
@@ -86,10 +85,9 @@
           </table>
         </article>
       </div>
-      <div id="slide2" class="visually-hidden promo-slider__slide">
+      <div id="slide2" class="visually-hidden promo-slider__slide promo-slider__brace">
         <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
         <article>
-          <span>02</span>
           <h2>Худеем правильно!
           </h2>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
@@ -105,13 +103,13 @@
           </table>
         </article>
       </div>
-      <div id="slide3" class="visually-hidden promo-slider__slide">
+      <div id="slide3" class="visually-hidden promo-slider__slide promo-slider__quadro">
         <img src="img/slider-3.png" width="526" height="334" alt="Фото квадракоптера">
         <article>
-          <span>03</span>
           <h2>Порхает как бабочка, жалит как пчела!</h2>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
+          <span class="promo-slider__number">03</span>
           <a class="button-default slide__button" href="/product/3">Подробнее</a>
           <table class="promo-slider__feature-list">
             <tr class="promo-slider__values">
@@ -311,6 +309,7 @@
     <button class="modal-map__close-button ">Закрыть</button>
     <img src="img/map-big-jpg.jpg" width="960" height="559" alt="Карта">
   </section>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
