@@ -381,7 +381,7 @@ h2 {
 
 .promo-slider {
   position: relative;
-  height: 600px;
+  height: 481px;
   z-index: 2;
   cursor: pointer;
 }
@@ -592,19 +592,6 @@ h2 {
   z-index: -1;
 }
 
-/* .promo-slider__quadro article:before {
-  position: absolute;
-  content: "03";
-  color: #ffffff;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 179px;
-  font-weight: 800;
-  line-height: 179.2px;
-  letter-spacing: 0.36px;
-  top: -78px;
-  left: 871px;
-} */
-
 .promo-slider__quadro article:after {
   position: absolute;
   content: "";
@@ -619,9 +606,54 @@ h2 {
 /* популярные категории */
 
 .popular-products {
-  width: 1160px;
+  /* width: 1160px; */
   display: flex;
   justify-content: space-between;
+}
+
+.popular-products__link:before {
+  display: block;
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-color: #f7e296;
+  margin-bottom: 34px;
+}
+
+.popular-products__vr:before {
+  background-image: url("../img/popular-1.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.popular-products__monopods:before {
+  background-image: url("../img/popular-2.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.popular-products__action-cameras:before {
+  background-image: url("../img/popular-3.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.popular-products__fitness-braces:before {
+  background-image: url("../img/popular-4.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.popular-products__smart-watches:before {
+  background-image: url("../img/popular-5.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.popular-products__quadrocopters:before {
+  background-image: url("../img/poppular-6.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .popular-products__link {
@@ -658,6 +690,8 @@ h2 {
 .popular-products__img-wrapper img {
   margin: auto;
 }
+
+/* Услуги */
 
 img.flip-bottom {
   margin-bottom: 0px;
