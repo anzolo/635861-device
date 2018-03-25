@@ -54,3 +54,6 @@ var toggleModal = function (modal) {
 
 document.getElementById("openFeedbackModal").onclick = toggleModal.bind(null, ".modal-write-us");
 document.getElementById("closeFeedbackModal").onclick = toggleModal.bind(null, ".modal-write-us");
+
+document.getElementById("map").onclick = toggleModal.bind(null, ".modal-map");
+document.getElementById("closeMapModal").onclick = toggleModal.bind(null, ".modal-map");

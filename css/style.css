@@ -1006,6 +1006,7 @@ services__wrapper:before {
 .addon__contacts>img {
   margin-top: 24px;
   margin-left: 3px;
+  cursor: pointer;
 }
 
 .addon__contacts>button {
@@ -1173,7 +1174,7 @@ services__wrapper:before {
   z-index: 10;
 }
 
-.modal-write-us__close-button {
+.modal-close-button {
   width: 55px;
   height: 55px;
   font-size: 0;
@@ -1188,16 +1189,16 @@ services__wrapper:before {
   opacity: 0.5;
 }
 
-.modal-write-us__close-button:hover {
+.modal-close-button:hover {
   opacity: 1;
 }
 
-.modal-write-us__close-button:active {
+.modal-close-button:active {
   opacity: 0.3;
 }
 
-.modal-write-us__close-button:before,
-.modal-write-us__close-button:after {
+.modal-close-button:before,
+.modal-close-button:after {
   content: "";
   position: absolute;
   width: 29px;
@@ -1207,11 +1208,11 @@ services__wrapper:before {
   background-color: #ffffff;
 }
 
-.modal-write-us__close-button:before {
+.modal-close-button:before {
   transform: rotate(45deg);
 }
 
-.modal-write-us__close-button:after {
+.modal-close-button:after {
   transform: rotate(-45deg);
 }
 
@@ -1298,4 +1299,19 @@ services__wrapper:before {
 .feedback-form input[type='submit'] {
   margin-top: 38px;
   width: 200px;
+}
+
+/* модальное окно карты */
+
+ .modal-map {
+  box-sizing: border-box;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  width: 960px;
+  height: 559px;
+  background-color: #ffffff;
+  margin-left: -480px;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  z-index: 10;
 }
