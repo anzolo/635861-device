@@ -919,3 +919,82 @@ services__wrapper:before {
 .partners__link:hover>img:nth-child(2) {
   display: block;
 }
+
+/* блок контактов и адреса */
+
+.addon {
+  display: flex;
+  margin-top: 101px;
+}
+
+.addon__about {
+  position: relative;
+  min-width: 559px;
+}
+
+.addon__about:after {
+  position: absolute;
+  content: "";
+  height: 7px;
+  width: 80px;
+  background-color: black;
+  top: -9px;
+  left: 0px;
+}
+
+.addon__about>p:nth-child(2) {
+  width: 428px;
+}
+
+.addon__about>p:nth-child(3) {
+  width: 477px;
+  margin-top: 30px;
+}
+
+.addon__transport-companies {
+  color: #000000;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 40px;
+  list-style: url('../img/slider-button.png');
+  margin-top: 65px;
+  padding-left: 19px;
+}
+
+.addon__transport-companies li {
+  padding-left: 16px;
+}
+
+.addon__about>a {
+  width: 260px;
+  text-align: center;
+  margin-top: 39px;
+  margin-left: 2px;
+}
+
+.addon__contacts {
+  margin-left: 38px;
+  position: relative;
+}
+
+.addon__contacts:after {
+  position: absolute;
+  content: "";
+  height: 7px;
+  width: 80px;
+  background-color: black;
+  top: -9px;
+  left: 3px;
+}
+
+.addon__contacts>img {
+  margin-top: 24px;
+  margin-left: 3px;
+}
+
+.addon__contacts>button {
+  width: 260px;
+  margin-top: 60px;
+  margin-left:5px;
+}
