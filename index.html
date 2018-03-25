@@ -124,7 +124,7 @@
         </article>
       </div>
     </section>
-    <section class="popular-products">
+    <section class="popular-products label-text">
       <h2 class="visually-hidden">Список популярных категорий</h2>
       <a class="popular-products__link popular-products__vr" href="/categories/vr">
         Виртуальная реальность
@@ -228,7 +228,7 @@
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
         <img src="img/map-small.jpg" width="560" height="222" alt="">
-        <button class="button-default">Напишите нам</button>
+        <button id="openFeedbackModal" class="button-default">Напишите нам</button>
       </div>
     </section>
   </main>
@@ -267,25 +267,26 @@
 
     </div>
   </footer>
-  <section "modal-write-us">
+  <section class="visually-hidden modal-write-us">
     <h2 class="visually-hidden ">Всплывающее окно обратной связи</h2>
-    <button class="modal-write-us__close-button ">Закрыть</button>
+    <button id="closeFeedbackModal" class="modal-write-us__close-button">Закрыть</button>
     <form class="modal-write-us__form feedback-form" action="https://echo.htmlacademy.ru" method="post ">
-      <div class="feedback-form__contacts ">
-        <p>
+      <div class="feedback-form__contacts label-text">
+        <div class="name-wrapper">
           <label for="feedback-form__name">Ваше имя:</label>
           <input type="text" name="name" id="feedback-form__name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="feedback-form__email ">Ваш e-mail:</label>
+        </div>
+        <div class="email-wrapper">
+          <label for="feedback-form__email">Ваш e-mail:</label>
           <input type="email" name="email" id="feedback-form__email" placeholder="email@example.com">
-        </p>
+        </div>
       </div>
-      <p>
-        <label for="feedback-form__message ">Текст письма:</label>
+      <div class="feedback-form__message label-text">
+        <label for="feedback-form__message-label">Текст письма:</label>
         <textarea name="message" id="feedback-form__message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </p>
-      <input type="submit" value="Отправить">
+      </div>
+
+      <input class="button-default" type="submit" value="Отправить">
     </form>
   </section>
   <section class="modal-map ">

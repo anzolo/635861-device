@@ -31,7 +31,7 @@ function servicesTurnOnSlide(event) {
   };
   this.classList.add("services__selected-slide");
 
-  for (let s = 0; s < servicesSlides.length; s++) {
+  for (var s = 0; s < servicesSlides.length; s++) {
     const slide = servicesSlides[s];
     slide.classList.add("visually-hidden");
   };
@@ -43,3 +43,14 @@ for (var i = 0; i < servicesSlidesControls.length; i++) {
   var button = servicesSlidesControls[i];
   button.onclick = servicesTurnOnSlide;
 }
+
+// модальное окно обратной связи
+var toggleModal = function (modal) {
+  var modalElem = document.querySelector(modal);
+  if (modalElem) {
+    modalElem.classList.toggle("visually-hidden");
+  }
+}
+
+document.getElementById("openFeedbackModal").onclick = toggleModal.bind(null, ".modal-write-us");
+document.getElementById("closeFeedbackModal").onclick = toggleModal.bind(null, ".modal-write-us");

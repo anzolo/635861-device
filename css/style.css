@@ -662,6 +662,9 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 160px;
+}
+
+.label-text {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1132,7 +1135,7 @@ services__wrapper:before {
 
 .footer__copyright {
   position: absolute;
-  top:-2px;
+  top: -2px;
   right: 2px;
 }
 
@@ -1150,4 +1153,149 @@ services__wrapper:before {
 
 .fade-link-below-alt a:active {
   opacity: 0.1;
+}
+
+/* модальное окно обратной связи */
+
+.modal-write-us {
+  box-sizing: border-box;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  width: 960px;
+  height: 553px;
+  background-color: #ffffff;
+  margin-left: -480px;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 94px;
+  z-index: 10;
+}
+
+.modal-write-us__close-button {
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  background-color: #f7e296;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  border: 1px solid #f7e296;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.modal-write-us__close-button:hover {
+  opacity: 1;
+}
+
+.modal-write-us__close-button:active {
+  opacity: 0.3;
+}
+
+.modal-write-us__close-button:before,
+.modal-write-us__close-button:after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 2px;
+  top: 26px;
+  left: 12px;
+  background-color: #ffffff;
+}
+
+.modal-write-us__close-button:before {
+  transform: rotate(45deg);
+}
+
+.modal-write-us__close-button:after {
+  transform: rotate(-45deg);
+}
+
+.feedback-form__contacts {
+  display: flex;
+}
+
+.email-wrapper {
+  margin-left: 40px;
+}
+
+.feedback-form__contacts input[type='text'],
+.feedback-form__contacts input[type='email'] {
+  border: none;
+  width: 360px;
+  height: 50px;
+  background-color: #f2f2f2;
+  margin-top: 7px;
+  /* background-color: red; */
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.feedback-form__contacts input[type='text']:hover,
+.feedback-form__contacts input[type='email']:hover,
+.feedback-form__message textarea:hover {
+  background-color: #eaeaea;
+}
+
+.feedback-form__contacts input[type='text']:focus,
+.feedback-form__contacts input[type='email']:focus,
+.feedback-form__message textarea:focus {
+  border: 3px solid #f0c52e;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.feedback-form__contacts input[type='text']:invalid,
+.feedback-form__contacts input[type='email']:invalid {
+  background-color: #f6dada;
+}
+
+/* .name-wrapper {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .feedback-form__contacts input {
+  margin-top: 7px;
+} */
+
+.feedback-form__contacts input::placeholder,
+.feedback-form__message textarea::placeholder {
+  color: rgba(70, 70, 70, 0.4);
+  /* padding-left: 20px; */
+  /* padding-top: 15px; */
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.feedback-form__message {
+  margin-top: 30px;
+}
+
+.feedback-form__message textarea {
+  width: 760px;
+  height: 156px;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.feedback-form input[type='submit'] {
+  margin-top: 38px;
+  width: 200px;
 }
