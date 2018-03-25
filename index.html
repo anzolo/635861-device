@@ -20,10 +20,10 @@
           <input type="submit" class="search-form__submit" value="Найти">
           <div class="search-form__icon"></div>
         </form>
-        <div class="header__user-actions fade-link-below">
-          <a class="header__login-link" href="/login">Войти</a>
-          <a class="header__compare-link" href="/compare">Сравнить</a>
-          <a class="header__basket-link" href="/basket">Корзина</a>
+        <div class="user-actions fade-link-below">
+          <a class="login-link" href="/login">Войти</a>
+          <a class="compare-link" href="/compare">Сравнить</a>
+          <a class="basket-link" href="/basket">Корзина</a>
         </div>
       </div>
       <div class="header__services-menu fade-link-below">
@@ -234,53 +234,38 @@
   </main>
   <footer class="footer container">
     <h2 class="visually-hidden">Подвал</h2>
-    <div class="footer_decorative-line"></div>
-    <div class="footer__logo logo-text">Device</div>
-    <div class="footer__menu">
-      <a class="footer__login-link" href="/login">
-        <img class="footer__login-icon" src="img/user.svg" width="13" height="12" alt="">Войти</a>
-      <a class="footer__compare-link" href="/compare">
-        <img class="footer__compare-icon" src="img/compare.svg" width="10" height="10" alt="">Сравнить</a>
-      <a class="footer__basket-link" href="/basket">
-        <img class="footer__basket-icon" src="img/cart.svg" width="12" height="12" alt="">Корзина</a>
+    <div class="footer__wrapper">
+      <div class="footer__logo logo-text">Device</div>
+      <div class="user-actions fade-link-below">
+        <a class="login-link" href="/login">Войти</a>
+        <a class="compare-link" href="/compare">Сравнить</a>
+        <a class="basket-link" href="/basket">Корзина</a>
+      </div>
+      <div class="footer__info-services">
+        <div class="footer__address">
+          г. Москва, ул. Строителей, 15
+        </div>
+        <div class="footer__services important-text fade-link-below">
+          <a class="footer__service-link" href="">Доставка</a>
+          <a class="footer__service-link footer__guarantee" href="">Гарантия</a>
+          <a class="footer__service-link" href="">Контакты</a>
+        </div>
+        <div class="footer__phone">
+          Тел.: +7 (495) 495-95-95
+        </div>
+      </div>
+      <div class="footer__social-services">
+        <div class="footer__social-buttons fade-link-below-alt">
+          <a class="footer__fb" href="#"></a>
+          <a class="footer__instagram" href="#"></a>
+          <a class="footer__twitter" href="#"></a>
+        </div>
+
+        <a class="footer__copyright dynamic-opacity-change" href="https://htmlacademy.ru/intensive/htmlcss">
+        </a>
+      </div>
+
     </div>
-    <p class="footer__address">
-      г. Москва, ул. Строителей, 15
-    </p>
-    <ul class="footer__services">
-      <li>
-        <a class="footer__service-link" href="">Доставка</a>
-      </li>
-      <li>
-        <a class="footer__service-link" href="">Гарантия</a>
-      </li>
-      <li>
-        <a class="footer__service-link" href="">Контакты</a>
-      </li>
-    </ul>
-    <p class="footer__phone">
-      Тел.: +7 (495) 495-95-95
-    </p>
-    <ul class="footer__social-bar">
-      <li>
-        <a href="#">
-          <img src="img/fb.svg" width="32" height="32" alt="Страница комании в Facebook ">
-        </a>
-      </li>
-      <li>
-        <a href="# ">
-          <img src="img/instagram.svg " width="32 " height="32 " alt="Страница комании в Instagram ">
-        </a>
-      </li>
-      <li>
-        <a href="# ">
-          <img src="img/twitter.svg " width="32 " height="32 " alt="Страница комании в Twitter ">
-        </a>
-      </li>
-    </ul>
-    <a class="footer__copyright " href="https://htmlacademy.ru/intensive/htmlcss ">
-      <img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy ">
-    </a>
   </footer>
   <section "modal-write-us">
     <h2 class="visually-hidden ">Всплывающее окно обратной связи</h2>

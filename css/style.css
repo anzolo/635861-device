@@ -246,13 +246,13 @@ h2 {
 
 /* кнопки пользователя - войти, корзина, сравнить */
 
-.header__user-actions {
+.user-actions {
   display: flex;
   margin-top: 9px;
   margin-left: 96px;
 }
 
-.header__login-link:before {
+.login-link:before {
   display: inline-block;
   content: "";
   background: url(../img/user.svg) no-repeat;
@@ -262,11 +262,11 @@ h2 {
   padding-right: 14px;
 }
 
-.header__compare-link {
+.compare-link {
   margin-left: 219px;
 }
 
-.header__compare-link:before {
+.compare-link:before {
   display: inline-block;
   content: "";
   background: url(../img/compare.svg) no-repeat;
@@ -275,11 +275,11 @@ h2 {
   padding-right: 10px;
 }
 
-.header__basket-link {
+.basket-link {
   margin-left: 42px;
 }
 
-.header__basket-link:before {
+.basket-link:before {
   display: inline-block;
   content: " ";
   background: url(../img/cart.svg) no-repeat;
@@ -1009,4 +1009,145 @@ services__wrapper:before {
   width: 260px;
   margin-top: 60px;
   margin-left: 5px;
+}
+
+.footer {
+  min-height: 323px;
+  background-color: #464646;
+  /* background-color: #ffc600; */
+  max-width: 1420px;
+  width: 1420px;
+  margin-top: 82px;
+  color: #ffffff;
+}
+
+.footer__wrapper {
+  padding-left: 130px;
+  padding-right: 128px;
+  padding-top: 72px;
+  position: relative;
+}
+
+.footer__logo {
+  position: absolute;
+  top: 60px;
+  left: 127px;
+}
+
+.footer .user-actions {
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+
+.footer .user-actions a {
+  color: #ffffff;
+}
+
+.footer .user-actions .compare-link {
+  margin-left: 47px;
+}
+
+.footer .user-actions .login-link:before {
+  background: url(../img/user-yellow.svg) no-repeat;
+}
+
+.footer .user-actions .compare-link:before {
+  background: url(../img/compare-yellow.svg) no-repeat;
+}
+
+.footer .user-actions .basket-link:before {
+  background: url(../img/cart-yellow.svg) no-repeat;
+}
+
+.footer__info-services {
+  display: flex;
+  margin-top: 35px;
+}
+
+.footer__services {
+  display: flex;
+  margin-left: 164px;
+  justify-content: space-between;
+  width: 430px;
+  margin-top: 7px;
+}
+
+.footer__service-link {
+  color: #ffffff;
+}
+
+.footer__phone {
+  margin-left: 200px;
+}
+
+.footer__social-services {
+  position: relative;
+  margin-top: 65px;
+}
+
+.footer__social-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 143px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__fb:before {
+  display: block;
+  content: "";
+  background: url(../img/fb.svg) no-repeat;
+  height: 32px;
+  width: 32px;
+  opacity: 0.3;
+}
+
+.footer__instagram:before {
+  display: block;
+  content: "";
+  background: url(../img/instagram.svg) no-repeat;
+  height: 32px;
+  width: 32px;
+  opacity: 0.3;
+}
+
+.footer__twitter:before {
+  display: block;
+  content: "";
+  background: url(../img/twitter.svg) no-repeat;
+  height: 32px;
+  width: 32px;
+  opacity: 0.3;
+}
+
+.footer__social-buttons:before {
+  position: absolute;
+  content: "";
+  background-color: #ffc600;
+  height: 7px;
+  width: 80px;
+  top: 12px;
+  left: 0px;
+}
+
+.footer__copyright {
+  position: absolute;
+  top:-2px;
+  right: 2px;
+}
+
+.footer__copyright:before {
+  display: block;
+  content: "";
+  background: url(../img/logo-html.svg) no-repeat;
+  height: 35px;
+  width: 27px;
+}
+
+.fade-link-below-alt a:hover {
+  opacity: 0.6;
+}
+
+.fade-link-below-alt a:active {
+  opacity: 0.1;
 }
