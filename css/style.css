@@ -857,6 +857,7 @@ services__wrapper:before {
 
 .services__guarantee:after {
   content: "";
+  margin-top: 69px;
   position: absolute;
   background: url("../img/warranty.svg") no-repeat;
   top: -8px;
@@ -893,4 +894,28 @@ services__wrapper:before {
   left: 537px;
   width: 171px;
   height: 194px;
+}
+
+/* блок партнеров */
+
+.partners {
+  margin-top: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners__link>img:nth-child(1) {
+  display: block;
+}
+
+.partners__link>img:nth-child(2) {
+  display: none;
+}
+
+.partners__link:hover>img:nth-child(1) {
+  display: none;
+}
+
+.partners__link:hover>img:nth-child(2) {
+  display: block;
 }
