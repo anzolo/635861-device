@@ -227,7 +227,7 @@
         <p>
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img src="img/map-small.jpg" width="560" height="222" alt="">
+        <img id="map" src="img/map-small.jpg" width="560" height="222" alt="">
         <button id="openFeedbackModal" class="button-default">Напишите нам</button>
       </div>
     </section>
@@ -269,7 +269,7 @@
   </footer>
   <section class="visually-hidden modal-write-us">
     <h2 class="visually-hidden ">Всплывающее окно обратной связи</h2>
-    <button id="closeFeedbackModal" class="modal-write-us__close-button">Закрыть</button>
+    <button id="closeFeedbackModal" class="modal-close-button">Закрыть</button>
     <form class="modal-write-us__form feedback-form" action="https://echo.htmlacademy.ru" method="post ">
       <div class="feedback-form__contacts label-text">
         <div class="name-wrapper">
@@ -289,9 +289,9 @@
       <input class="button-default" type="submit" value="Отправить">
     </form>
   </section>
-  <section class="modal-map ">
+  <section class="visually-hidden modal-map">
     <h2 class="visually-hidden ">Всплывающее окно с картой</h2>
-    <button class="modal-map__close-button ">Закрыть</button>
+    <button id="closeMapModal"  class="modal-close-button">Закрыть</button>
     <img src="img/map-big-jpg.jpg" width="960" height="559" alt="Карта">
   </section>
   <script src="js/scripts.js"></script>
