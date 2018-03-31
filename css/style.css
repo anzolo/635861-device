@@ -23,6 +23,10 @@
 
 /* common*/
 
+/*
+мой visually-hidden без !important работает некорректно. поэтому я вынужден настоять на том, чтобы его оставить. visually-hidden - это универсальный сервисный класс, не вижу ничего страшного там использовать !important
+ */
+
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -337,15 +341,9 @@ h2 {
   z-index: 5;
 }
 
-/* .header__products-catalog:before {
-  position: absolute;
-  content: "";
-  height: 46px;
-  width: 249px;
-  background-color: black;
-  top:-30px;
-  left:35px;
-} */
+.header__products-catalog ul:nth-child(1) {
+  margin-left: 22px;
+}
 
 .header__products-catalog li {
   padding-bottom: 7px;
@@ -415,7 +413,7 @@ h2 {
   height: 486px;
   width: 1010px;
   top: -111px;
-  left: 90px;
+  left: 101px;
 }
 
 .promo-slider__selfie article {
@@ -478,7 +476,7 @@ h2 {
   height: 486px;
   width: 1010px;
   top: -98px;
-  left: 116px;
+  left: 126px;
 }
 
 .promo-slider__brace article {
@@ -542,7 +540,7 @@ h2 {
   height: 486px;
   width: 1010px;
   top: -45px;
-  left: 32px;
+  left: 41px;
 }
 
 .promo-slider__quadro article {
@@ -695,7 +693,7 @@ h2 {
 .services {
   min-height: 388px;
   margin-top: 81px;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5);
 }
 
@@ -714,6 +712,7 @@ h2 {
   margin-top: 80px;
   justify-content: space-between;
   height: 169px;
+  min-width: 285px;
 }
 
 /* .services__wrapper aside {
@@ -725,7 +724,7 @@ h2 {
   position: absolute;
   background-color: #000000;
   /* top:10px; */
-  left: 278px;
+  left: 288px;
   width: 7px;
   height: 319px;
 }
@@ -780,7 +779,7 @@ services__wrapper:before {
 }
 
 .services__delivery {
-  margin-left: 120px;
+  margin-left: 113px;
   position: relative;
 }
 
@@ -810,7 +809,7 @@ services__wrapper:before {
 }
 
 .services__guarantee {
-  margin-left: 120px;
+  margin-left: 113px;
   position: relative;
 }
 
@@ -834,14 +833,14 @@ services__wrapper:before {
   margin-top: 69px;
   position: absolute;
   background: url("../img/warranty.svg") no-repeat;
-  top: -8px;
+  top: -78px;
   left: 547px;
   width: 171px;
   height: 194px;
 }
 
 .services__credit {
-  margin-left: 120px;
+  margin-left: 113px;
   position: relative;
 }
 
@@ -998,15 +997,12 @@ services__wrapper:before {
   min-height: 323px;
   background-color: #464646;
   /* background-color: #ffc600; */
-  max-width: 1420px;
-  width: 1420px;
+  width: 100%;
   margin-top: 82px;
   color: #ffffff;
 }
 
 .footer__wrapper {
-  padding-left: 130px;
-  padding-right: 128px;
   padding-top: 72px;
   position: relative;
 }
@@ -1014,7 +1010,7 @@ services__wrapper:before {
 .footer__logo {
   position: absolute;
   top: 60px;
-  left: 127px;
+  left: 8px;
 }
 
 .footer .user-actions {
@@ -1049,7 +1045,7 @@ services__wrapper:before {
 
 .footer__services {
   display: flex;
-  margin-left: 164px;
+  margin-left: 153px;
   justify-content: space-between;
   width: 430px;
   margin-top: 7px;
@@ -1059,7 +1055,12 @@ services__wrapper:before {
   color: #ffffff;
 }
 
+.footer__address {
+  min-width: 210px;
+}
+
 .footer__phone {
+  min-width: 170px;
   margin-left: 200px;
 }
 
@@ -1282,7 +1283,7 @@ services__wrapper:before {
 
 /* модальное окно карты */
 
- .modal-map {
+.modal-map {
   box-sizing: border-box;
   position: fixed;
   top: 120px;
