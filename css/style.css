@@ -23,12 +23,6 @@
 
 /* common*/
 
-html,
-body {
-  min-width: 1440px;
-  min-height: 1750px;
-}
-
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -699,24 +693,19 @@ h2 {
 } */
 
 .services {
-  height: 388px;
-  width: 1440px;
+  min-height: 388px;
   margin-top: 81px;
+  width: 100vw;
   background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5);
-  margin-left: -140px;
 }
 
 .services__wrapper {
   display: flex;
-  margin-left: 139px;
+  /* margin-left: 139px; */
   position: relative;
+  width: 1160px;
+  margin: auto;
 }
-
-/* .services h2:after {
-  display: block;
-  position: relative;
-  background-color: #e5e5e5;
-} */
 
 .services__menu {
   width: 278px;
@@ -782,24 +771,6 @@ services__wrapper:before {
   width: 7px;
   height: 319px;
 }
-
-/* .services__menu .services__menu-item {
-  width: 160px;
-  /* padding-left: 25px;
-  padding-right: 25px; */
-
-}
-
-*/
-/* .services__menu>div:hover {
-  width: 278px;
-  background-color: black;
-} */
-
-/* .services__menu>div:hover .services__menu-item {
-  color: #f7e184;
-  background: black;
-} */
 
 .service-slide {
   width: 800px;
@@ -921,6 +892,14 @@ services__wrapper:before {
 
 .partners__link:hover>img:nth-child(2) {
   display: block;
+}
+
+.partners__logo {
+  opacity: 0.2;
+}
+
+.partners__logo:hover {
+  opacity: 1;
 }
 
 /* блок контактов и адреса */
