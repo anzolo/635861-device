@@ -1447,9 +1447,10 @@ services__wrapper:before {
 
 .product-list__content {
   display: flex;
-  min-height: 1216px;
+  min-height: 1143px;
   flex-direction: column;
   background-color: #ffffff;
+  padding-bottom: 73px;
 }
 
 .products {
@@ -1531,7 +1532,7 @@ services__wrapper:before {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 14px;
   font-weight: 800;
-  color:rgba(0,0,0,0.2);
+  color: rgba(0, 0, 0, 0.2);
   line-height: 24px;
   letter-spacing: 0.25px;
   border: 2px solid rgba(205, 57, 68, 0.1);
