@@ -25,38 +25,37 @@
           <a class="basket-link" href="/basket">Корзина</a>
         </div>
       </div>
-      <div class="header__services-menu fade-link-below">
-        <a class="header__catalog important-text" href="catalog.html">Каталог товаров</a>
-        <nav class="header__products-catalog fade-link-below">
-          <ul class="header__product-category">
-            <li>
-              <a href="catalog.html">Виртуальная реальность</a>
-            </li>
-            <li>
-              <a href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li>
-              <a href="catalog.html">Экшн-камеры</a>
-            </li>
-          </ul>
-          <ul class="header__product-category">
-            <li>
-              <a href="catalog.html">Фитнес-браслеты</a>
-            </li>
-            <li>
-              <a href="catalog.html">Умные часы</a>
-            </li>
-          </ul>
-          <ul class="header__product-category">
-            <li>
-              <a href="catalog.html">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__delivery-link important-text" href="/delivery">Доставка</a>
-        <a class="header__guarantee-link important-text" href="/guarantee">Гарантия</a>
-        <a class="header__contacts-link important-text" href="/contacts">Контакты</a>
-      </div>
+
+      <nav>
+        <ul class="header__services-menu fade-link-below list">
+          <li class="header__catalog list-item">
+            <a class="important-text" href="#" class="list-link">Каталог товаров</a>
+            <div class="list-inner">
+              <ul>
+                <li><a href="catalog.html">Виртуальная реальность</a></li>
+                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                <li><a href="catalog.html">Экшн-камеры</a></li>
+              </ul>
+              <ul>
+                <li><a href="catalog.html">Фитнес-браслеты</a></li>
+                <li><a href="catalog.html">Умные часы</a></li>
+              </ul>
+              <ul>
+                <li><a href="catalog.html">Квадрокоптеры</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="header__delivery-link important-text">
+            <a href="/delivery">Доставка</a>
+          </li>
+          <li class="header__guarantee-link important-text">
+            <a href="/guarantee">Гарантия</a>
+          </li>
+          <li class="header__contacts-link important-text">
+            <a href="/contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
   </header>
@@ -69,6 +68,7 @@
           <h2>Делай селфи, как Бен Стиллер!</h2>
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
+          <span class="promo-slider__number">01</span>
           <a class="button-default slide__button" href="catalog.html">Подробнее</a>
           <table class="promo-slider__feature-list">
             <tr class="promo-slider__values">
@@ -91,6 +91,7 @@
           </h2>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
+          <span class="promo-slider__number">02</span>
           <a class="button-default slide__button" href="catalog.html">Подробнее</a>
           <table class="promo-slider__feature-list">
             <tr class="promo-slider__values">
@@ -290,7 +291,7 @@
   </section>
   <section class="visually-hidden modal-map">
     <h2 class="visually-hidden ">Всплывающее окно с картой</h2>
-    <button id="closeMapModal"  class="modal-close-button">Закрыть</button>
+    <button id="closeMapModal" class="modal-close-button">Закрыть</button>
     <img src="img/map-big-jpg.jpg" width="960" height="559" alt="Карта">
   </section>
   <script src="js/scripts.js"></script>

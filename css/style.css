@@ -38,6 +38,7 @@
 }
 
 body {
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Arial, sans-serif;
@@ -301,10 +302,51 @@ h2 {
 
 /* вторая строка меню - каталог, доставка, гарантия, контакты */
 
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  position: relative;
+  width: 50%;
+}
+
+.list-item:hover .list-inner {
+  display: flex;
+}
+
+.list-inner {
+  position: absolute;
+  display: none;
+
+  background-color: #f7e296;
+  height: 159px;
+  width: 1101px;
+  z-index: 5;
+  left: -59px;
+  padding-left: 59px;
+}
+
+.list-inner ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .header__services-menu {
   display: flex;
-  margin-top: 28px;
+  margin-top: 25px;
   position: relative;
+  list-style: none;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .header__catalog {
@@ -320,13 +362,8 @@ h2 {
   opacity: 0.3;
   height: 16px;
   width: 16px;
-  top: 4px;
-  left: 231px;
-}
-
-.header__catalog:hover~.header__products-catalog,
-.header__products-catalog:hover {
-  display: flex;
+  top: 7px;
+  left: 232px;
 }
 
 .header__delivery-link {
@@ -339,9 +376,10 @@ h2 {
 
 .header__contacts-link {
   margin-left: 109px;
+  margin-right: 55px;
 }
 
-.header__products-catalog {
+/* .header__products-catalog {
   position: absolute;
   padding-top: 12px;
   top: 21px;
@@ -350,26 +388,20 @@ h2 {
   height: 154px;
   width: 1160px;
   z-index: 5;
+} */
+
+.list-inner ul:nth-child(1) {
+  padding-left: 2px;
+  height: 103px;
 }
 
-.header__products-catalog ul:nth-child(1) {
-  margin-left: 22px;
+.list-inner ul:nth-child(2) {
+  margin-left: 63px;
+  height: 67px;
 }
 
-.header__products-catalog li {
-  padding-bottom: 7px;
-}
-
-.header__products-catalog ul {
-  list-style: none;
-}
-
-.header__products-catalog ul:nth-child(1) {
-  margin-right: 23px;
-}
-
-.header__products-catalog ul:nth-child(2) {
-  margin-right: 37px;
+.list-inner ul:nth-child(3) {
+  margin-left: 77px;
 }
 
 .header__menu-wrapper:after {
@@ -434,6 +466,8 @@ h2 {
 
 .promo-slider__selfie h2 {
   margin-bottom: 0;
+  width: 398px;
+  letter-spacing: 0.01em;
 }
 
 .promo-slider__selfie p {
@@ -445,18 +479,17 @@ h2 {
 }
 
 .promo-slider__selfie table {
-  width: 550px;
-  margin-left: -3px;
-  margin-top: 50px;
+  width: 569px;
+  margin-left: -2px;
+  margin-top: 47px;
 }
 
 .promo-slider__selfie td {
   padding: 0;
 }
 
-.promo-slider__selfie article:before {
+.promo-slider__selfie .promo-slider__number {
   position: absolute;
-  content: "01";
   color: #ffffff;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 179px;
@@ -465,6 +498,7 @@ h2 {
   letter-spacing: 0.36px;
   top: -12px;
   left: 840px;
+  z-index: -1;
 }
 
 .promo-slider__selfie article:after {
@@ -476,10 +510,6 @@ h2 {
   top: 328px;
   left: 908px;
   background: left / contain url("../img/slider-button.svg") no-repeat, 33px / contain url("../img/slider-button-empty.svg") no-repeat, 67px / contain url("../img/slider-button-empty.svg") no-repeat;
-}
-
-.promo-slider__selfie h2 {
-  width: 390px;
 }
 
 .promo-slider__brace {
@@ -509,18 +539,18 @@ h2 {
 }
 
 .promo-slider__brace table {
-  width: 550px;
-  margin-left: -3px;
-  margin-top: 47px;
+  width: 569px;
+  margin-left: -2px;
+  margin-top: 43px;
 }
 
 .promo-slider__brace td {
   padding: 0;
+  padding-top: 5px;
 }
 
-.promo-slider__brace article:before {
+.promo-slider__brace .promo-slider__number {
   position: absolute;
-  content: "02";
   color: #ffffff;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 179px;
@@ -561,7 +591,8 @@ h2 {
 
 .promo-slider__quadro h2 {
   margin-bottom: 0;
-  width: 500px;
+  width: 502px;
+  letter-spacing: 0.01em;
 }
 
 .promo-slider__quadro p {
@@ -1058,10 +1089,11 @@ services__wrapper:before {
 
 .footer__services {
   display: flex;
-  margin-left: 153px;
+  margin-left: 157px;
   justify-content: space-between;
   width: 430px;
   margin-top: 7px;
+  letter-spacing: 0.17em;
 }
 
 .footer__service-link {
@@ -1715,6 +1747,7 @@ services__wrapper:before {
 .color-checkbox {
   font-size: 14px;
   margin-bottom: 9px;
+  cursor: pointer;
 }
 
 .color-checkbox .label {
@@ -1754,6 +1787,7 @@ services__wrapper:before {
 .bluetooth-radio {
   font-size: 14px;
   margin-bottom: 9px;
+  cursor: pointer;
 }
 
 .bluetooth-radio .label {
