@@ -355,7 +355,8 @@ h2 {
 .list-inner ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  /* list-style-type: none; */
+  list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
