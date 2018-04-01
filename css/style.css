@@ -1249,6 +1249,7 @@ services__wrapper:before {
   display: block;
   content: "";
   background: url(../img/logo-html.svg) no-repeat;
+  background-position: 100% 0%;
   height: 35px;
   width: 27px;
 }
