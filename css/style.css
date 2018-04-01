@@ -301,14 +301,13 @@ h2 {
 
 /* вторая строка меню - каталог, доставка, гарантия, контакты */
 
+
+
+
 .header__services-menu {
   display: flex;
   margin-top: 28px;
   position: relative;
-}
-
-.header__services-menu>a {
-  /* display: block; */
 }
 
 .header__catalog {
@@ -328,7 +327,7 @@ h2 {
   left: 231px;
 }
 
-.header__catalog:hover~.header__products-catalog {
+.header__catalog:hover~.header__products-catalog, .header__products-catalog:hover {
   display: flex;
 }
 
@@ -346,7 +345,8 @@ h2 {
 
 .header__products-catalog {
   position: absolute;
-  top: 32px;
+  padding-top: 12px;
+  top: 21px;
   background-color: #f7e296;
   display: none;
   height: 154px;
@@ -1645,6 +1645,10 @@ services__wrapper:before {
 .price-gap-control__button:active {
   width: 22px;
   height: 24px;
+}
+
+.price-gap-control__button:hover {
+  cursor: pointer;
 }
 
 .price-gap-control__begin {
