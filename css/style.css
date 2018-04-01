@@ -165,7 +165,7 @@ h2 {
 
 .header__user-menu {
   display: flex;
-  /* align-items: baseline; */
+  justify-content: space-between;
   padding-top: 35px;
 }
 
@@ -251,7 +251,7 @@ h2 {
 .user-actions {
   display: flex;
   margin-top: 9px;
-  margin-left: 96px;
+  margin-right: 59px;
 }
 
 .login-link:before {
@@ -262,6 +262,10 @@ h2 {
   height: 13px;
   width: 12px;
   padding-right: 14px;
+}
+
+.login-link--is-logoff {
+  margin-right: 150px;
 }
 
 .logout-link {
@@ -915,6 +919,7 @@ services__wrapper:before {
 .addon {
   display: flex;
   margin-top: 101px;
+  margin-bottom: 82px;
 }
 
 .addon__about {
@@ -1007,7 +1012,7 @@ services__wrapper:before {
   background-color: #464646;
   /* background-color: #ffc600; */
   width: 100%;
-  margin-top: 82px;
+  /* margin-top: 82px; */
   color: #ffffff;
 }
 
@@ -1025,6 +1030,7 @@ services__wrapper:before {
 .footer .user-actions {
   justify-content: flex-end;
   margin-top: -8px;
+  margin-right: 0;
 }
 
 .footer .user-actions a {
@@ -1071,6 +1077,7 @@ services__wrapper:before {
 .footer__phone {
   min-width: 170px;
   margin-left: 200px;
+  text-align: right;
 }
 
 .footer__social-services {
@@ -1433,8 +1440,6 @@ services__wrapper:before {
   display: flex;
 }
 
-.product-list__content {}
-
 .product-list__filter {
   display: flex;
   flex-direction: column;
@@ -1444,6 +1449,7 @@ services__wrapper:before {
 
 .product-list__content {
   display: flex;
+  min-height: 1216px;
   flex-direction: column;
   background-color: #ffffff;
 }
@@ -1553,19 +1559,19 @@ services__wrapper:before {
 }
 
 .product-list__pages a {
-  color:#cacaca;
+  color: #cacaca;
 }
 
 .product-list__page--active a {
-  color:black;
+  color: black;
 }
 
 .product-list__pages a:hover {
-  color:#7a7a7a;
+  color: #7a7a7a;
 }
 
 .product-list__pages a:active {
-  color:black;
+  color: black;
 }
 
 .product-list__control {
@@ -1579,11 +1585,170 @@ services__wrapper:before {
 }
 
 .product-list__control:hover {
-  background-color:#d8d8d8;
+  background-color: #d8d8d8;
 }
 
 .product-list__control:active {
-  background-color:#d8d8d8;
+  background-color: #d8d8d8;
   color: #979797;
 }
 
+.product-list__filter {
+  margin-top: 68px;
+}
+
+.filter-form__label {
+  text-transform: none;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+}
+
+.filter-form__label:before {
+  display: block;
+  content: "";
+  background-color: black;
+  width: 201px;
+  height: 2px;
+  margin-bottom: 10px;
+}
+
+.price-gap-control {
+  position: relative;
+  min-height: 104px;
+}
+
+.price-gap-control__line {
+  position: absolute;
+  background-color: #dbdbdb;
+  width: 201px;
+  height: 2px;
+  top: 35px;
+  left: 0;
+}
+
+.price-gap-control__filled-line {
+  position: absolute;
+  background-color: #91c92f;
+  width: 110px;
+  height: 2px;
+  top: 35px;
+  left: 3px;
+}
+
+.price-gap-control__button {
+  position: absolute;
+  background: url("../img/filter-button.svg") no-repeat center/contain;
+  width: 20px;
+  height: 22px;
+}
+
+.price-gap-control__button:active {
+  width: 22px;
+  height: 24px;
+}
+
+.price-gap-control__begin {
+  position: relative;
+  top: 26px;
+  left: -6px;
+}
+
+.price-gap-control__end {
+  position: relative;
+  top: 4px;
+  left: 106px;
+}
+
+.price-gap-control__begin:after {
+  content: "от 0";
+  position: absolute;
+  font-size: 14px;
+  color: #c6c6c6;
+  min-width: 50px;
+  top: 18px;
+  left: 6px;
+}
+
+.price-gap-control__end:after {
+  content: "до 5000";
+  position: absolute;
+  font-size: 14px;
+  color: #c6c6c6;
+  min-width: 100px;
+  top: 18px;
+  left: -15px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 27px;
+  height: 23px;
+  background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+.checkbox-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkbox:checked+.checkbox-custom {
+  background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+.color-checkbox {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.color-checkbox .label{
+  margin-left: 8px;
+}
+
+.filter-form__color-label {
+  margin-bottom: 21px;
+}
+
+.filter-form__bluetooth-label {
+  margin-top: 28px;
+  margin-bottom: 21px;
+}
+
+.radio {
+  display: none;
+}
+
+.radio-custom {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: url("../img/radio-off.svg") no-repeat;
+}
+
+.radio-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio:checked+.radio-custom {
+  background: url("../img/radio-on.svg") no-repeat;
+}
+
+.bluetooth-radio {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.bluetooth-radio .label{
+  margin-left: 8px;
+}
+
+.filter-form__show-button {
+  margin-top: 28px;
+  width:200px;
+}

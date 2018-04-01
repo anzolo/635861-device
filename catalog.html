@@ -96,21 +96,63 @@
       </div>
       <div class="product-list__content-wrapper container">
         <form class="product-list__filter filter-form" action="https://echo.htmlacademy.ru" method="post">
-          <span class="filter-form__label">Стоимость</span>
-          <input type="number" name="price">
+          <span class="important-text filter-form__label">Стоимость</span>
+          <input type="hidden" name="price">
+          <div class="price-gap-control">
+            <div class="price-gap-control__line"></div>
+            <div class="price-gap-control__filled-line"></div>
+            <div class="price-gap-control__begin price-gap-control__button"></div>
+            <div class="price-gap-control__end price-gap-control__button"></div>
 
-          <span class="filter-form__label">Цвет</span>
-          <input type="checkbox" name="color_black"> Черный
-          <input type="checkbox" name="color_white"> Белый
-          <input type="checkbox" name="color_blue"> Синий
-          <input type="checkbox" name="color_red"> Красный
-          <input type="checkbox" name="color_pink"> Розовый
+          </div>
 
-          <span class="filter-form__label">Bluetooth</span>
-          <input type="radio" name="bluetooth" value="yes" checked> Есть
-          <input type="radio" name="bluetooth" value="no"> Нет
+          <span class="important-text filter-form__label filter-form__color-label">Цвет</span>
 
-          <input class="button" type="submit" value="Показать">
+          <label class="color-checkbox">
+            <input class="checkbox" type="checkbox" name="color_black" checked>
+            <span class="checkbox-custom"></span>
+            <span class="label">Черный</span>
+          </label>
+
+          <label class="color-checkbox">
+            <input class="checkbox" type="checkbox" name="color_white">
+            <span class="checkbox-custom"></span>
+            <span class="label">Белый</span>
+          </label>
+
+          <label class="color-checkbox">
+            <input class="checkbox" type="checkbox" name="color_blue" checked>
+            <span class="checkbox-custom"></span>
+            <span class="label">Синий</span>
+          </label>
+
+          <label class="color-checkbox">
+            <input class="checkbox" type="checkbox" name="color_red" checked>
+            <span class="checkbox-custom"></span>
+            <span class="label">Красный</span>
+          </label>
+
+          <label class="color-checkbox">
+            <input class="checkbox" type="checkbox" name="color_pink">
+            <span class="checkbox-custom"></span>
+            <span class="label">Розовый</span>
+          </label>
+
+          <span class="important-text filter-form__label filter-form__bluetooth-label">Bluetooth</span>
+
+          <label class="bluetooth-radio">
+            <input class="radio" type="radio" name="bluetooth" value="yes" checked>
+            <span class="radio-custom"></span>
+            <span class="label">Есть</span>
+          </label>
+
+          <label class="bluetooth-radio">
+            <input class="radio" type="radio" name="bluetooth" value="no">
+            <span class="radio-custom"></span>
+            <span class="label">Нет</span>
+          </label>
+
+          <input class="filter-form__show-button button-default" type="submit" value="Показать">
         </form>
         <div class="product-list__content">
           <div class="products">
@@ -189,7 +231,8 @@
     <div class="footer__wrapper container">
       <div class="footer__logo logo-text dynamic-opacity-change">Device</div>
       <div class="user-actions fade-link-below">
-        <a class="login-link" href="/login">Войти</a>
+        <a class="login-link" href="/profile">Валентин Петухов</a>
+        <a class="logout-link" href="/logout">Выйти</a>
         <a class="compare-link" href="/compare">Сравнить</a>
         <a class="basket-link" href="/basket">Корзина</a>
       </div>
